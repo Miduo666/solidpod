@@ -38,9 +38,37 @@ export 'src/solid/constants/solid_constants.dart';
 // Legacy exports for backward compatibility (deprecated, use SolidConstants instead)
 
 export 'src/solid/constants/common.dart'
-    show foaf, terms, ResourceStatus, permStr, agentStr, whatIsWebID, demoWebID;
+    show
+        foaf,
+        terms,
+        ResourceStatus,
+        permStr,
+        agentStr,
+        whatIsWebID,
+        demoWebID,
+        pubAgent,
+        authAgent,
+        dataDir,
+        profCard,
+        authUserPred;
 export 'src/solid/constants/schema.dart' show appsTerms;
 export 'src/solid/constants/path_type.dart' show PathType;
+
+/// Export Web Access Control constants and enums
+
+export 'src/solid/constants/web_acl.dart'
+    show
+        AccessMode,
+        getAccessMode,
+        RecipientType,
+        getRecipientType,
+        publicAgent,
+        authenticatedAgent;
+
+/// Export permission and logging models
+
+export 'src/solid/models/permission_details.dart' show PermissionDetails;
+export 'src/solid/models/log_record.dart' show LogRecord;
 
 /// Common RDF predicates for Linked Data operations.
 /// Includes predicates for RDF, FOAF, ACL, VCard, Dublin Core Terms, and XSD.
@@ -159,16 +187,6 @@ export 'src/solid/read_permission.dart';
 
 export 'src/solid/revoke_permission.dart';
 
-/// Permission types and access control utilities
-export 'src/solid/constants/web_acl.dart'
-    show
-        RecipientType,
-        AccessMode,
-        getRecipientType,
-        getAccessMode,
-        publicAgent,
-        authenticatedAgent;
-
 /// Functions to upload, download, and delete large file from a Solid server
 
 export 'src/solid/utils/large_file_helper.dart'
@@ -218,8 +236,6 @@ export 'src/solid/write_external_pod.dart';
 /// 20251103 jesscmoore In common.dart, only authUserPred is
 /// used by notepod
 
-export 'src/solid/constants/common.dart' show dataDir, profCard, authUserPred;
-
 /// Function to get resources in a user's POD
 
 export 'src/solid/get_resources.dart';
@@ -241,18 +257,11 @@ export 'src/solid/shared_resource_history.dart' show sharedResourcesHistory;
 
 export 'src/solid/utils/get_authoriser.dart' show getAuthoriser;
 
-/// Data model for permission details
-
-export 'src/solid/models/permission_details.dart' show PermissionDetails;
 
 /// Utilities for parsing permission data into the Permission model
 
 export 'src/solid/utils/permission_helper.dart'
     show PermissionHelper, permMapToList;
-
-/// Data model for log records (permission history entries)
-
-export 'src/solid/models/log_record.dart' show LogRecord;
 
 /// Data model for parsed permission entries
 
